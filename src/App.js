@@ -9,7 +9,7 @@ import Profile from './components/Profile';
 import { history } from "./helpers/history";
 import {CreateLayout as Sto} from './components/Sto';
 import { clearMessage } from "./actions/message";
-
+import Signup from './components/Singup';
 import {
   BrowserRouter as Router,
   Routes as Switch,
@@ -66,6 +66,7 @@ function App() {
           <Route exact path="/skladiste" element={<Skladiste />} />
           <Route exact path="/sank" element={<Sank />} />
           <Route exact path="/rezervacija" element={<Rezervacija />} />
+          <Route exact path="/signup" element={<Signup history={history}/>} />
         </Switch>
     
   </Router>
