@@ -89,8 +89,7 @@ function ProdajKartu() {
     else 
 console.log(events);
   return (
-    <Container style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', placeContent: 'space-around'}}>
-  
+    <Container style={{marginLeft: '15vw', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', placeContent: 'space-between'}}>
     <Box maxWidth="sm" style={{marginTop: "10vh", display: 'flex', placeItems: 'flex-start', flexDirection:'column'}}>
    <h3>Prodaj Kartu</h3>
   
