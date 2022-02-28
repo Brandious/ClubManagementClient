@@ -1,0 +1,24 @@
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+
+export const CREATE_EVENT = "CREATE_EVENT";
+export const GET_EVENT = "GET_EVENT";
+export const PAST_EVENT = "PAST_EVENT";
+export const UPCOMING_EVENT = "UPCOMING_EVENT";
+
+export const PRODAJ_KARTU = "PRODAJ_KARTU";
+export const GET_PRODANE_KARTE = "GET_PRODANE_KARTE";
+
+export const CREATE_ARTIKAL = "CREATE_ARTIKAL";
+export const GET_ARTIKAL = "GET_ARTIKAL";
+export const UPDATE_ARTIKAL = "UPDATE_ARTIKAL";
+export const GET_STANJE_ARTIKAL = "GET_STANJE_ARTIKAL";
+
+export const GET_RASPORED = "GET_RASPORED";
+export const CREATE_RASPORED = "CREATE_RASPORED";
