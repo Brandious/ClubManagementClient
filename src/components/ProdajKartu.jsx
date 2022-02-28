@@ -90,11 +90,11 @@ function ProdajKartu() {
 console.log(events);
   return (
     <Container style={{marginLeft: '15vw', display: 'flex', flexDirection: 'column', flexWrap: 'wrap', placeContent: 'space-between'}}>
-    <Box maxWidth="sm" style={{marginTop: "10vh", display: 'flex', placeItems: 'flex-start', flexDirection:'column'}}>
+     <Box maxWidth="sm" style={{marginTop: "10vh", display: 'flex', placeItems: 'flex-start', flexDirection:'column'}}>
    <h3>Prodaj Kartu</h3>
   
    <LocalizationProvider dateAdapter={AdapterDateFns}>
-       <Stack spacing={5} sx={{ width: 500, height: 450 }} >      
+       <Stack spacing={5} sx={{ maxWidth: '70vw' }} >      
             
        <TextField
           id="outlined-select-currency"
