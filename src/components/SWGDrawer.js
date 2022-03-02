@@ -19,7 +19,7 @@ class SVGDrawer {
           .attr("transform", (d) => "translate(" + d.x + "," + d.y + ")")
           .on('click', () => {
             
-     
+            console.log(nodes[0]);
             nodes[0].setOpen();  
           })
 
@@ -37,12 +37,13 @@ class SVGDrawer {
         // Append the text
         node
           .append("text")
+          .style("font-size", "10px")
           .attr("x", 13)
           .attr("y", 13)
           .attr("width", 15)
           .attr("dominant-baseline", "middle")
           .attr("text-anchor", "middle")
-          .text((d) => d.color);
+          .text((d) => d.name);
       });
   }
 }

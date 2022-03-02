@@ -20,7 +20,7 @@ function ProdajKartu() {
     const [value, setValue] = React.useState(new Date());
     const [currency, setCurrency] = React.useState('');
     const [checked, setChecked] = React.useState(false);
-    const [rezervacija, setRezervacija] = React.useState('false');
+    // const [rezervacija, setRezervacija] = React.useState(false);
     const [events, setEvents] = useState();
     const { user: currentUser } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
@@ -145,7 +145,7 @@ console.log(events);
               <FormGroup>
             <FormControlLabel control={<Switch checked={checked} onChange={handleCheck}/>} label="Rezervacija" />
             </FormGroup>
-            {checked && <Rezervacija />}
+            {checked && <Rezervacija event={event}/>}
             </div>
         </>}
             <Button variant="contained" onClick={handleProdajKartu}>Prodaj Kartu</Button>

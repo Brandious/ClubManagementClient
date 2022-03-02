@@ -3,7 +3,7 @@ import authHeader from "./auth-header";
 
 
 
-const API_URL = process.env.NODE_ENV === 'production' ? "api/":"http://localhost:3002/api/";
+const API_URL = process.env.NODE_ENV === 'production' ? "api/" : "http://localhost:3002/api/";
 
 const getArtikle = (userId) =>{ 
     
@@ -35,11 +35,9 @@ const newArtikal = (naziv, mjer_jed, redni_broj, popisanoKnjigovodstvo, eventId)
 
  const updateArtikal = (artikalId, popisana_kolicina) => {
      
-  
-    
-  
+    return axios.patch(API_URL + 'artikal',{artikalId, popisana_kolicina} ,{headers: authHeader()});
 
-    return axios.patch(API_URL + 'artikal',{artikalId, popisana_kolicina} ,{headers: authHeader()});}
+}
 
 export default {
 // /    getContacts,

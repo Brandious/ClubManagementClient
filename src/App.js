@@ -24,7 +24,7 @@ import Sank from './components/Sank';
 import StaffEvent from './components/StaffEvent';
 import ProdajKartu from './components/ProdajKartu';
 import Rezervacija from './components/Reservacija';
-
+import Inventura from './components/Inventura';
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
       
     }
   }, [currentUser]);
-
+console.log(process.env.NODE_ENV)
   return (
     <Router history={history}>
      {currentUser ? (showManagementBoard ? <Drawer /> : <StaffDrawer />) : <></>}
@@ -63,7 +63,7 @@ function App() {
           <Route exact path="/eventpage" element={<EventPage />} />
           <Route exact path="/staffevent" element={<StaffEvent />} />
           <Route exact path="/prodajkartu" element={<ProdajKartu />} />
-          <Route exact path="/skladiste" element={<Skladiste />} />
+          <Route exact path="/skladiste" element={<Inventura />} />
           <Route exact path="/sank" element={<Sank />} />
           <Route exact path="/rezervacija" element={<Rezervacija />} />
           <Route exact path="/signup" element={<Signup history={history}/>} />

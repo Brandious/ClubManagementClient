@@ -23,18 +23,19 @@ const convertCoordinatesDOMtoSVG = (svg, x, y) => {
   return pt.matrixTransform(svg.node().getScreenCTM().inverse());
 };
 
-const SVGArea = ({ draggedData }) => {
+const SVGArea = ({ draggedData, event }) => {
 
     const { state } = useLocation();
     const [stolovi, setStolovi] = useState();
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(true);
+    
     useEffect( () => {
         const getData = async() => {
              
                 try{
-                    
-                  let res = await dispatch(getRaspored(1));
+                  console.log(event.id);
+                  let res = await dispatch(getRaspored(event.id));
                   res = await res.data;
         
                   console.log(res);

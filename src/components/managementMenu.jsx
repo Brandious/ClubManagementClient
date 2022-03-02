@@ -140,24 +140,24 @@ const DrawerHeader = styled('div')(({ theme }) => ({
               <MenuIcon />
             </IconButton>
            
-            <Box style={{ display: 'flex', flexDirection: 'row',  justifyContent:'space-between', alignContent: 'space-between', justifyItems: 'flex-start', alignItems: 'flex-start', width: '100%'}}>
+            <Box style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignContent: 'space-between', justifyItems: 'center', alignItems: 'center', width: '100%' }}>
            
-            <Typography variant="h6" noWrap component="div">
-              Diamond | Management Panel 
+            <Typography variant="h6" noWrap component="div" style={{fontSize: 'clamp(5px, 14px, 24px)'}}>
+              Diamond | Management Panel
             </Typography>
            
 
             {currentUser ? (
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }}>
-         
-                 <Typography variant="h6" noWrap component="div">
-                     <strong>{currentUser.username}</strong> 
-                </Typography>  
-             
-         
-                <Button href="/login" variant="outlined" onClick={logout()} style={{color: 'white'}}>Log Out</Button>
-            
-            </div>
+             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+
+             <Typography variant="h6" noWrap component="div" style={{fontSize: 'clamp(5px, 14px, 24px)'}}>
+               <strong>{currentUser.username}</strong>
+             </Typography>
+
+
+             <Button href="/login" variant="outlined" onClick={logout()} style={{ color: 'white', fontSize: 'clamp(5px, 14px, 24px)'}}>Log Out</Button>
+
+           </div>
           ) : (
             <div >
             

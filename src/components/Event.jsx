@@ -96,6 +96,7 @@ function Event() {
 
      
           await dispatch(newEvent(file, name,opis, datum,prices, brojGostiju ,stanjeSkladista, currentUser.id));
+          alert("Event Kreiran");
   }
   
   return (

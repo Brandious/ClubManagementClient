@@ -93,38 +93,7 @@ export default function UploadButtons() {
         </Button>
       </label>
 
-      <label htmlFor="contained-button-file">
-       
-       <h5>Unesi Stanje Sanka 1</h5>
 
-       <Input accept="image/*" id="contained-button-file" multiple type="file" />
-       <Button variant="contained" component="span">
-         Upload
-       </Button>
-       
-     </label>
-
-     <label htmlFor="contained-button-file">
-       
-       <h5>Unesi Stanje Sanka 2</h5>
-
-       <Input accept="image/*" id="contained-button-file" multiple type="file" />
-       <Button variant="contained" component="span">
-         Upload
-       </Button>
-       
-     </label>
-
-     <label htmlFor="contained-button-file">
-       
-       <h5>Unesi Stanje Sanka 3</h5>
-
-       <Input accept="image/*" id="contained-button-file" multiple type="file" />
-       <Button variant="contained" component="span">
-         Upload
-       </Button>
-       
-     </label>
     </Stack>
 
     <Box>

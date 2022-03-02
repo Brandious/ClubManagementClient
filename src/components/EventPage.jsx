@@ -13,7 +13,7 @@ import Buffer from 'buffer';
 import { getProdaneKarte } from '../actions/karte';
 import ProdaneKarte from './prodaneKarte.jsx';
 import Skladiste from './Skladiste';
-
+import Inventura from './Inventura';
 const buff = Buffer.Buffer;
 export default function SimpleContainer() {
 
@@ -87,7 +87,7 @@ export default function SimpleContainer() {
             </Box>
 
             <Box sx={{  width:'70vw'}} >
-              <Skladiste />
+              <Inventura />
             </Box>
         </div>
         

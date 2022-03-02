@@ -197,13 +197,13 @@ export default function MiniDrawer() {
             <ListItemText primary={'Prodaj Kartu'} />
           </ListItem>
 
-
-          <ListItem button component={Link} to="/Rezervacije" >
+{/* 
+          <ListItem button component={Link} to="/Rezervacija" >
             <ListItemIcon>
               <KreirajEvent />
             </ListItemIcon>
             <ListItemText primary={'Rezervacije'} />
-          </ListItem>
+          </ListItem> */}
 
         </List>
         <Divider />
