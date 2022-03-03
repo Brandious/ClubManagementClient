@@ -82,7 +82,7 @@ export default function UploadButtons() {
   }
   return (
     <Container>
-    <Stack direction="row" alignItems="center" spacing={2} style={{marginTop: '10vh', paddingLeft: '10vw'}}>
+    <Stack direction="row" alignItems="center" spacing={2}>
       <label htmlFor="contained-button-file">
        
         <h5>Unesi Stanje Skladista</h5>

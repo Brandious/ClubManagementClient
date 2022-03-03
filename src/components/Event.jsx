@@ -100,13 +100,13 @@ function Event() {
   }
   
   return (
-    <Container style={{marginLeft: '15vw', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', placeContent: 'space-between'}}>
+    <Container style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', placeContent: 'space-between'}}>
   
     <Box maxWidth="sm" style={{marginTop: "10vh", display: 'flex', placeItems: 'flex-start', flexDirection:'column'}}>
    <h3>Kreiraj Event</h3>
   
    <LocalizationProvider dateAdapter={AdapterDateFns}>
-       <Stack spacing={5} sx={{ maxWidth: '70vw' }}>      
+       <Stack spacing={5} sx={{ maxWidth: '100vw' }}>      
             
              <TextField id="filled-basic" label="Naziv Eventa" variant="outlined" onChange={onChangeName}/> 
              <TextField id="filled-basic" label="Opis Eventa" variant="outlined" onChange={onChangeOpis}/> 

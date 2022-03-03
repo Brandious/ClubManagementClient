@@ -32,7 +32,7 @@ import Stolovi from '@mui/icons-material/TableBarSharp';
 import ZavrseniEventi from '@mui/icons-material/EventAvailableSharp';
 import { useDispatch, useSelector } from "react-redux";
 import Cjenici from '@mui/icons-material/MenuBook';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const drawerWidth = 240;
 
@@ -50,6 +50,7 @@ transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
 }),
+
 overflowX: 'hidden',
 width: `calc(${theme.spacing(7)} + 1px)`,
 [theme.breakpoints.up('sm')]: {
@@ -62,6 +63,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
+
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   }));
@@ -91,6 +93,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
       flexShrink: 0,
       whiteSpace: 'nowrap',
       boxSizing: 'border-box',
+      
       ...(open && {
         ...openedMixin(theme),
         '& .MuiDrawer-paper': openedMixin(theme),
@@ -105,7 +108,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   export default function MiniDrawer() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-   
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
     const dispatch = useDispatch();
     const { user: currentUser } = useSelector((state) => state.auth);
    
@@ -181,7 +184,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
             
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
+        {(matches || open) && <Drawer variant="permanent" open={open}>
           <DrawerHeader>
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -250,7 +253,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
               </ListItem>
 
           </List>
-        </Drawer>
+        </Drawer>}
     
       </Box>
     );
